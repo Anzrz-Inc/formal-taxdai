@@ -2,6 +2,7 @@
 // Licensed under the MIT license.
 
 import React from "react";
+import TaxdAI_Logo from '../../../../src/assets/TaxdAI_Logo.png'
 import { NavLink } from "react-router-dom";
 import { FontIcon } from "@fluentui/react";
 import ConditionalNavLink from "../common/conditionalNavLink/conditionalNavLink";
@@ -17,13 +18,18 @@ import "./sidebar.scss";
  */
 export function Sidebar({ project }) {
     const projectId = project ? project.id : null;
+    const logoStyle = {
+        width: "1.3em",
+
+    }
 
     return (
         <div className="bg-lighter-2 app-sidebar" id="appSidebar">
             <ul>
                 <li>
                     <NavLink title={"Home"} to={`/`} exact role="button">
-                        <FontIcon iconName="Home" />
+                        {/* <FontIcon iconName="Home" /> */}
+                        <img style={logoStyle} alt={"Logo"} src={TaxdAI_Logo}></img>
                     </NavLink>
                 </li>
                 <li>
